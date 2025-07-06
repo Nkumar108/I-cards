@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ID Card Generator (Front Only)</title>
+  <title>ID Card Generator (Front Only + BG)</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h2>ID Card Generator (Front)</h2>
+  <h2>ID Card Generator (Front with Background)</h2>
   <div class="form-container">
     <input type="text" id="name" placeholder="Author Name"/>
     <input type="text" id="designation" placeholder="Designation"/>
@@ -16,15 +16,16 @@
     <input type="email" id="email" placeholder="Email"/>
     <input type="text" id="phone" placeholder="Phone"/>
     <input type="text" id="website" placeholder="Website"/>
-    <input type="file" id="photo" accept="image/*"/>
+    Profile Photo:<input type="file" id="photo" accept="image/*"/>
+    Background-img:<input type="file" id="bg" accept="image/*"/>
     <button onclick="downloadCard()">Download Front</button>
   </div>
 
   <div class="card-preview" id="card-front">
-    <div class="card-header">BOL BAM<br/><small>Jai Mhakal</small></div>
+    <div class="card-header">Bol Bam<br/><small>Jay Mhakal</small></div>
     <div class="photo"><img id="preview-photo" src="" alt="Photo"/></div>
     <div class="info">
-      <h3 id="card-name">Name</h3>
+      <h3 id="card-name">Author Name</h3>
       <p id="card-designation">Designation</p>
       <p>ID NO: <span id="card-idNo">000 000 000</span></p>
       <p>DOB: <span id="card-dob">MM/DD/YEAR</span></p>

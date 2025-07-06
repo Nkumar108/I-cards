@@ -15,6 +15,15 @@ document.getElementById("photo").onchange = (e) => {
   reader.readAsDataURL(e.target.files[0]);
 };
 
+document.getElementById("bg").onchange = (e) => {
+  const reader = new FileReader();
+  reader.onload = function(event) {
+    document.getElementById("card-front").style.backgroundImage = `url(${event.target.result})`;
+    document.getElementById("card-front").style.backgroundSize = "cover";
+  };
+  reader.readAsDataURL(e.target.files[0]);
+};
+
 function downloadCard() {
   html2canvas(document.getElementById("card-front")).then(canvas => {
     const link = document.createElement('a');
